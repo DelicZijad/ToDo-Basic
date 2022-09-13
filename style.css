@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: block;
+  border: none;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(90deg, #da70d6, #BA55D3);
+}
+
+.upper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding-block: 3rem;
+}
+@media screen and (max-width: 420px) {
+  .upper {
+    flex-direction: column;
+  }
+}
+.upper * {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+.upper--text {
+  display: flex;
+}
+.upper--add {
+  color: white;
+  background-color: #FF7F50;
+  font-weight: 900;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.upper--inp {
+  outline: none;
+}
+.upper--options {
+  height: max-content;
+  color: rgb(181, 171, 171);
+  outline: none;
+}
+.upper--options option {
+  padding: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.blur {
+  opacity: 0.5;
+}
+
+.show {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  font-size: 1.25rem;
+}
+@media screen and (max-width: 420px) {
+  .show {
+    font-size: 1rem;
+  }
+}
+.show--item {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+}
+.show--item * {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding-inline: 0.5rem;
+}
+.show--para {
+  padding-inline: 0.75rem;
+  background-color: white;
+  color: rgb(131, 127, 127);
+}
+@media screen and (max-width: 420px) {
+  .show--para {
+    font-size: 0.9rem;
+  }
+}
+.show--check {
+  color: white;
+  background-color: #FF7F50;
+  cursor: pointer;
+}
+.show--delete {
+  background-color: #da2c43;
+  color: white;
+  cursor: pointer;
+}

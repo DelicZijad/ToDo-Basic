@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: block;
+    border: none;
+}
+body {
+   min-height: 100vh;
+   background-image:linear-gradient(90deg,#da70d6,#BA55D3);
+}
+@mixin mobile{
+    @media screen and (max-width:420px) {
+        @content;
+    }
+}
+.upper{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+    gap: 3rem;
+    padding-block: 3rem;
+    @include mobile{
+        flex-direction: column;
+    }
+    *{
+       padding: 0.5rem;
+       font-size: 1rem;
+    
+    }
+    &--text{
+        display: flex;
+    }
+    &--add{
+        color: white;
+   background-color: #FF7F50;
+   font-weight: 900;
+   font-size: 1.5rem;
+   cursor: pointer;
+    }
+    &--inp{
+        outline: none;
+     
+    }
+ &--options{
+height: max-content;
+color: rgb(181, 171, 171);
+outline: none;
+    option{
+        padding: 0;
+    }
+ }
+}
+.hide{
+    display: none;
+}
+.blur{
+    opacity: 0.5;
+}
+
+.show{
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    font-size:1.25rem ;
+    @include mobile{
+        font-size: 1rem;
+    }
+     &--item{
+       display: flex;
+       align-items: center;
+     height: 2.5rem;
+
+      *{
+    height: 100%;
+    display: grid;
+    place-items: center;
+    padding-inline: 0.5rem;
+       }
+     }
+     &--para{
+        padding-inline: 0.75rem;
+        background-color: white;
+        color:rgb(131, 127, 127) ;
+        @include mobile{
+            font-size: 0.9rem;
+        }
+     }
+     &--check{
+        color: white;
+        background-color:#FF7F50 ;
+        cursor: pointer;
+     }
+     &--delete{
+        background-color: #da2c43;
+        color: white;
+        cursor: pointer;
+     }
+}
